@@ -11,6 +11,7 @@ services:
             - .:/var/www/html
         networks:
             - laravel
+        command: bash -c "php artisan migrate --seed && apache2-foreground"
 
 networks:
     laravel:
